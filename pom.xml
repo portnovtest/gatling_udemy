@@ -5,7 +5,7 @@
 
   <groupId>io.gatling.demo</groupId>
   <artifactId>advanced-gatling-web-applications</artifactId>
-  <version>3.8.4</version>
+  <version>3.9.5</version>
 
   <properties>
     <!-- use the following if you're compiling with JDK 8-->
