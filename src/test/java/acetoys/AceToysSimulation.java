@@ -30,6 +30,11 @@ public class AceToysSimulation extends Simulation {
             case "CLOSED_MODEL" -> TestPopulation.closedModel;
             default -> TestPopulation.instantUsers;
         };
-        setUp(testPopulation).protocols(httpProtocol);
+        setUp(testPopulation).protocols(httpProtocol)
+                .assertions(
+                        global().responseTime().mean().lt(3),
+                        global().successfulRequests().percent().gt(99.0),
+                        forAll().responseTime().max().lt(5)
+                );
     }
 }
